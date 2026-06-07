@@ -4,7 +4,7 @@
 
 This project focuses on automatically classifying customer complaint tickets into predefined categories using Natural Language Processing (NLP) and Machine Learning techniques.
 
-Customer support teams often receive thousands of complaints every day. Manually reviewing and routing these tickets is time-consuming and prone to delays. This project demonstrates how text classification can be used to automatically identify the category of a complaint and streamline the support process.
+Customer support teams receive thousands of complaints every day. Manually reviewing and routing these tickets is time-consuming and prone to delays. This project demonstrates how text classification can be used to automatically identify the category of a complaint and streamline the support process.
 
 The model was trained on real-world consumer complaint data and achieved an accuracy of **81.72%** using TF-IDF feature extraction and Logistic Regression.
 
@@ -12,14 +12,9 @@ The model was trained on real-world consumer complaint data and achieved an accu
 
 ## Problem Statement
 
-Organizations receive customer complaints related to different financial products and services. Efficiently categorizing these complaints is essential for:
+Organizations receive large volumes of customer complaints related to different financial products and services. Manually categorizing these complaints can be inefficient and lead to delays in issue resolution.
 
-* Faster ticket routing
-* Reduced manual effort
-* Improved customer support efficiency
-* Better issue tracking and analysis
-
-The objective of this project is to build a machine learning model capable of predicting the complaint category from the complaint text.
+The objective of this project is to build a machine learning model capable of automatically classifying complaint narratives into their appropriate categories.
 
 ---
 
@@ -29,6 +24,10 @@ The project uses consumer complaint records containing:
 
 * Consumer Complaint Narrative (text description)
 * Product Category (target label)
+
+Due to the large dataset size, the raw dataset is not included in this repository.
+
+Users can download the dataset separately and place it inside the `data/` directory before running the notebook.
 
 ### Categories Used
 
@@ -42,48 +41,14 @@ The project uses consumer complaint records containing:
 
 ## Project Workflow
 
-### 1. Data Preparation
-
-* Loaded and filtered complaint records
-* Removed missing values
-* Selected relevant categories
-
-### 2. Text Preprocessing
-
-* Converted text to lowercase
-* Removed special characters and unwanted symbols
-* Cleaned complaint narratives for analysis
-
-### 3. Feature Engineering
-
-* Applied TF-IDF Vectorization
-* Generated 5,000 text features
-
-### 4. Model Training
-
-* Split data into training and testing sets
-* Trained a Logistic Regression classifier
-
-### 5. Model Evaluation
-
-* Accuracy Score
-* Classification Report
-* Confusion Matrix
-
-### 6. Prediction System
-
-* Accepts new complaint text
-* Predicts the most likely complaint category
-
----
-
-## Model Performance
-
-| Metric   | Score  |
-| -------- | ------ |
-| Accuracy | 81.72% |
-
-The model demonstrated strong classification performance across multiple complaint categories while maintaining good precision and recall scores.
+1. Data Loading and Exploration
+2. Text Cleaning and Preprocessing
+3. TF-IDF Feature Extraction
+4. Train-Test Split
+5. Logistic Regression Model Training
+6. Model Evaluation
+7. Sample Prediction
+8. Model Saving using Pickle
 
 ---
 
@@ -92,31 +57,52 @@ The model demonstrated strong classification performance across multiple complai
 * Python
 * Pandas
 * NumPy
-* Scikit-Learn
-* TF-IDF Vectorizer
+* Scikit-learn
+* Natural Language Processing (NLP)
+* TF-IDF Vectorization
 * Logistic Regression
 * Matplotlib
 * Seaborn
-* Jupyter Notebook / Google Colab
+* Jupyter Notebook
+
+---
+
+## Model Performance
+
+### Accuracy
+
+**81.72%**
+
+### Evaluation Metrics
+
+The model was evaluated using:
+
+* Accuracy Score
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
 
 ---
 
 ## Project Structure
 
 ```text
-FUTURE_ML_02
+FUTURE_ML_02/
+│
+├── data/
 │
 ├── notebook/
 │   └── support_ticket_classification.ipynb
 │
 ├── screenshots/
-│   ├── dataset_preview.png
-│   ├── cleaned_text.png
-│   ├── tf_idf.png
-│   ├── train_split.png
-│   ├── classification_report.png
-│   ├── confusion_matrix.png
-│   └── sample_prediction.png
+│   ├── dataset preview.png
+│   ├── cleaned text.png
+│   ├── tf idf.png
+│   ├── train split.png
+│   ├── classification report.png
+│   ├── confusion matrix.png
+│   └── sample prediction.png
 │
 ├── requirements.txt
 └── README.md
@@ -124,29 +110,36 @@ FUTURE_ML_02
 
 ---
 
+## Results
+
+* Model Accuracy: **81.72%**
+* Successfully classified customer complaint narratives into predefined categories.
+* Automated ticket categorization using NLP techniques.
+* Generated predictions for unseen complaint text.
+
+---
+
 ## Sample Prediction
 
-**Input Complaint**
+Input Complaint:
 
-> "I was denied a mortgage loan even though my credit score is good."
+> I was denied a mortgage loan even though my credit score is good.
 
-**Predicted Category**
+Predicted Category:
 
-> Mortgage
+> Debt Collection
 
 ---
 
 ## Future Improvements
 
-* Experiment with advanced NLP models
-* Compare multiple classification algorithms
-* Deploy the model as a web application
-* Integrate real-time ticket prediction APIs
+* Experiment with advanced NLP models such as BERT.
+* Build a web interface using Streamlit.
+* Support real-time complaint classification.
+* Improve performance through hyperparameter tuning.
 
 ---
 
-## Author
+## Conclusion
 
-**Rishika Srivastava**
-
-Machine Learning & Data Science Enthusiast
+This project demonstrates the practical application of Natural Language Processing and Machine Learning in automating support ticket classification. By using TF-IDF feature extraction and Logistic Regression, the system can efficiently categorize customer complaints and help streamline support operations.
