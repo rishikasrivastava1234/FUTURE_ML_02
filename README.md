@@ -110,6 +110,32 @@ FUTURE_ML_02/
 
 ---
 
+## Project Screenshots
+
+### Dataset Preview
+
+The dataset contains customer complaint narratives along with their corresponding product categories used for classification.
+
+![Dataset Preview](screenshots/dataset%20preview.png)
+
+---
+
+### Classification Report
+
+The classification report summarizes the model's precision, recall, F1-score, and support for each complaint category.
+
+![Classification Report](screenshots/classification%20report.png)
+
+---
+
+### Confusion Matrix
+
+The confusion matrix provides a visual representation of the model's predictions compared to the actual categories.
+
+![Confusion Matrix](screenshots/confusion%20matrix.png)
+
+---
+
 ## Results
 
 * Model Accuracy: **81.72%**
@@ -121,11 +147,11 @@ FUTURE_ML_02/
 
 ## Sample Prediction
 
-Input Complaint:
+**Input Complaint:**
 
 > I was denied a mortgage loan even though my credit score is good.
 
-Predicted Category:
+**Predicted Category:**
 
 > Debt Collection
 
